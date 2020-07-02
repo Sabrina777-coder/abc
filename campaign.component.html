@@ -1,0 +1,555 @@
+﻿
+<div class="container">
+  <div class="well-sm"></div>
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+ 
+     <h4 class="PnlHeader"> CAMPAIGN </h4>
+
+
+  <div class="row">
+    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+      <label>{{'CampaignType' | filterLabel : Customizelabels}}</label>
+      <span class="custom-dropdown small"  >
+        <select><option *ngFor="let type of CampTyp" [value]="type.Cntid">{{type.Name}}</option></select>
+          </span>
+    </div>
+    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+      <label>{{'CampaignName' | filterLabel : Customizelabels}}</label>
+          <div class="Divtxtemployeeschright">
+          <input type="text" class="form-control input-sm" />
+          <img md-card-image src="./assets/images/smalllookup.png" class="lookupshowcurson">
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+      <label>{{'CampaignActivityOwner' | filterLabel : Customizelabels}}</label>
+       <span class="custom-dropdown small">
+         <select>
+           <option>N/A</option>
+         </select>
+       </span>
+   
+    </div>
+  </div>
+
+     <div class="row">
+       <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+         <label>{{'PlannedExecutionDate' | filterLabel : Customizelabels}}</label>
+         <date-picker></date-picker>
+       </div>
+       <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+         <label>{{'ActualExecutionDate' | filterLabel : Customizelabels}}</label>
+         <date-picker></date-picker>
+       </div>
+       <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+         <label class="AuditTrailFields">{{'LastUpdatedBy' | filterLabel : Customizelabels}}</label><br />
+         <!--<label>{{'LastUpdatedBy' | filterLabel : Customizelabels}}</label>-->
+       </div>
+
+     </div>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+      <label class="AuditTrailFields">{{'LastUPdatedOn' | filterLabel : Customizelabels}}</label><br />
+      <!--<label class="AuditTrailFields" *ngIf="selectedOpportunityStatus">{{selectedOpportunityStatus}}</label>-->
+      <!--<label>{{'LastUPdatedOn' | filterLabel : Customizelabels}}</label>-->
+    </div>
+    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+      <label class="AuditTrailFields">{{'CampaignCreatedBy' | filterLabel : Customizelabels}}</label><br />
+      <!--<label>{{'CampaignCreatedBy' | filterLabel : Customizelabels}}</label>-->
+    </div>
+    <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+      <label class="AuditTrailFields">{{'CampaignCreatedOn' | filterLabel : Customizelabels}}</label><br />
+      <!--<label>{{'CampaignCreatedOn' | filterLabel : Customizelabels}}</label>-->
+    </div>
+
+   
+  
+  </div>
+
+  
+     <hr class="SeparatorLine" />
+</div>
+    
+
+
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <h4 class="PnlHeader"> TARGETS </h4>
+   
+      <div class="row">
+        <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+            <label>{{'Target' | filterLabel : Customizelabels}}</label>
+            <input type="text" class="form-control input-sm">
+        </div>
+
+        <div class="well-sm"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <span class="custom-dropdown small"  style="margin-top:6px">
+              <select>
+                <option>N/A</option>
+                <option>New Opportunities</option>
+                <option>Revenue</option>
+              </select>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+            <label>{{'Achievement' | filterLabel : Customizelabels}}</label>
+            <input type="text" class="form-control input-sm">
+        </div>
+   
+        <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+            <label>{{'LeadSourceType' | filterLabel : Customizelabels}}</label>
+            <span class="custom-dropdown small">
+              <select>
+                <option>N/A</option>
+              </select>
+            </span>
+        </div>
+      
+        <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+            <label>{{'LeadSource' | filterLabel : Customizelabels}}</label>
+            <span class="custom-dropdown small">
+              <select>
+                <option>N/A</option>
+              </select>
+            </span>
+        </div>
+      </div>
+    <hr class="SeparatorLine" />
+    </div>
+
+
+  <div class=" row">
+    <div class="col-lg-12">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+      <h4 class="PnlHeader"> CAMPAIGN - PLAN</h4>
+
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="form-group">
+            <label>{{'CampaignBudget' | filterLabel : Customizelabels}}</label>
+            <input type="text" class="form-control input-sm" style="width:225px">
+          </div>
+        </div>
+
+        <div class="well-sm"></div>
+        <div class="col-lg-3 form-group">
+            <span class="custom-dropdown small" style="margin-top:6px">
+              <select>
+                <option *ngFor="let types of Currency" [value]="types.SdlId">{{types.Name}}</option>
+              </select>
+            </span>
+         
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-md-6 col-sm-8 col-xs-12 form-group">
+            <label>{{'CampaignDescription' | filterLabel : Customizelabels}}</label>
+            <textarea rows="3" cols="50" class="form-control input-sm"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-md-6 col-sm-8 col-xs-12 form-group">
+            <label>{{'CampaignObjetive' | filterLabel : Customizelabels}}</label>
+            <textarea rows="3" cols="50" class="form-control input-sm"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <h4 class="PnlHeader">  CAMPAIGN - ACTUAL </h4>
+
+      <div class="row">
+        <div class="col-md-5 form-group">
+            <label>{{'CampaignBudget' | filterLabel : Customizelabels}}</label>
+            <input type="text" class="form-control input-sm" style="width:225px">
+        </div>
+        <div class="well-sm"></div>
+        <div class="col-md-3 form-group">
+            <span class="custom-dropdown small" style="margin-top:6px">
+              <select>
+                <option *ngFor="let types of Currency" [value]="types.SdlId">{{types.Name}}</option>
+              </select>
+            </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-md-6 col-sm-8 col-xs-12 form-group">
+            <label>{{'OverallRemarks' | filterLabel : Customizelabels}}</label>
+            <textarea rows="3" cols="50" class="form-control input-sm"></textarea>
+        </div>
+      </div>
+
+      
+    </div>
+    
+    </div>
+   
+    </div>
+  <div class="container">
+    <hr class="SeparatorLine" />
+  </div>
+  
+ 
+   
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h4 class="PnlHeader">TASKS</h4>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+          <label>{{'TaskName' | filterLabel : Customizelabels}}</label>
+          <input type="text" class="form-control input-sm">
+      </div>
+   
+      <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+          <label>{{'ResponsiblePerson' | filterLabel : Customizelabels}}</label>
+          <span class="custom-dropdown small">
+            <select>
+              <option>N/A</option>
+            </select>
+          </span>
+      </div>
+  
+      <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+          <label>{{'PlannedCompletionDate' | filterLabel : Customizelabels}}</label>
+          <date-picker></date-picker>
+      </div>
+    </div>
+
+    <div class=" row">
+      <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 form-group">
+          <label>{{'ActualCompletionDate' | filterLabel : Customizelabels}}</label>
+         <date-picker></date-picker>
+      </div>
+    
+      <div class="col-md-8">
+          <label>{{'StartReminding' | filterLabel : Customizelabels}}</label>
+      </div>
+ 
+
+
+    <div class="row">
+
+      <div class="col-md-1">
+        <input type="text" class="form-control input-sm" style="width: 125px" />
+      </div>
+
+      <div class="col-md-3">
+        <h6 style="margin-left:50px">days before Planned Completion Date at</h6>
+        <!--<h5 style="margin-left: 13px"> days before Planned Completion Date at</h5>-->
+      </div>
+
+      <div class="col-md-1">
+        <input type="text" class="form-control input-sm" style="width:100px; margin-left:-10px" />
+      </div>
+      <div class="col-md-2">
+        <h6>every day</h6>
+      </div>
+      </div>
+  </div>
+
+    <hr class="SeparatorLine" />
+    </div>
+
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <h4 class="PnlHeader"> OPPORTUNITY FILTERS </h4>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+              <div class="form-group">
+                <label>{{'Country' | filterLabel : Customizelabels}}</label>
+                <span class="custom-dropdown small">
+                    <select  (change)="onCountryChange($event.target.value)" [(ngModel)]="selectedDropDown.countryid">
+                      <option *ngFor="let list of countries" [value]="list.Cntid">{{list.Name}}</option>
+                    </select>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+              <div class="form-group">
+                <label>{{'City' | filterLabel : Customizelabels}}</label>
+                <multiselect [data]="cities" (getCommaSeperatedValues)="GetCommaSeperatedcities($event)"  [(ngModel)]="selectedcities" [settings]="multiselectSettings"  ></multiselect>
+
+                <!--<span class="custom-dropdown small">
+                  <select (change)="onCityChange($event.target.value)"   [(ngModel)]="selectedDropDown.cityid">
+                    <option *ngFor="let list of cities" [value]="list.Ctyid">{{list.Name}}</option>
+                  </select>
+                </span>-->
+              </div>
+            </div>
+       
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+              <div class="form-group">
+                <label>{{'IndustryType' | filterLabel : Customizelabels}}</label>
+                <multiselect [data]="IndusrtyType" (getCommaSeperatedValues)="GetCommaSeperatedindustrytypes($event)" [(ngModel)]="selectedindustrytype" [settings]="multiselectSettings"></multiselect>
+
+                <!--<span class="custom-dropdown small">
+                  <select (change)="onIndustryTypeChange($event.target.value)" [(ngModel)]="selectedDropDown.IndusrtyTypeid">
+                    <option *ngFor="let list of IndusrtyType" [value]="list.SdlId">{{list.Name}}</option>
+                  </select>
+                </span>-->
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+                <label>{{'Industry' | filterLabel : Customizelabels}}</label>
+              <multiselect [data]="Indusrty" (getCommaSeperatedValues)="onIndustryChange($event)" [(ngModel)]="selectedindusrty" [settings]="multiselectSettings"></multiselect>
+
+
+                <!--<span class="custom-dropdown small">
+                  <select  (change)="onIndustryChange($event.target.value)" [(ngModel)]="selectedDropDown.Indusrtyid">
+                    <option *ngFor="let list of Indusrty" [value]="list.SdlId">{{list.Name}}</option>
+                  </select>
+                </span>-->
+            </div>
+         
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+                <label>{{'DesignationContactPerson' | filterLabel : Customizelabels}}</label>
+              <multiselect [data]="Designation" (getCommaSeperatedValues)="onDesignationChange($event)" [(ngModel)]="selectedDesignation" [settings]="multiselectSettings"></multiselect>
+
+
+                <!--<span class="custom-dropdown small">
+                  <select (change)="onIndustryChange($event.target.value)"  [(ngModel)]="selectedDropDown.Designationid">
+                    <option  *ngFor="let list of Designation" [value]="list.DesignationId">{{list.Name}}</option>
+                  </select>
+                </span>-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+                <label>{{'NameContactPerson' | filterLabel : Customizelabels}}</label>
+              <!--<multiselect [data]="ContactPerson" [(ngModel)]="selectedcontactperson" [settings]="multiselectSettings"></multiselect>-->
+
+
+                <!--<span class="custom-dropdown small">
+                  <select  (change)="onIndustryChange($event.target.value)" [(ngModel)]="selectedDropDown.ContactPersonid">
+                    <option *ngFor="let list of ContactPerson" [value]="list.OCPId">{{list.Name}}</option>
+                  </select>
+                </span>-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+              <label style="margin-bottom:10px">{{'SalesOwner' | filterLabel : Customizelabels}}</label><br />
+              <multiselect [data]="SalesOwnerPerson" [(ngModel)]="selectedsalesowner" [settings]="multiselectSettings"></multiselect>
+
+
+
+              <!--<span class="custom-dropdown small">
+                <select  (change)="onIndustryChange($event.target.value)"  [(ngModel)]="selectedDropDown.SalesOwnerPersonid">
+                  <option *ngFor="let list of SalesOwnerPerson" [value]="list.SOSId">{{list.SalesPerson}}</option>
+                </select>
+              </span>-->
+
+            </div>
+          </div>
+
+          <div class="row">
+         
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+                <label>{{'OpportunityCreatedby' | filterLabel : Customizelabels}}</label><br />
+              <multiselect [data]="OppoCreatedBy"   [(ngModel)]="selectedOppoCreatedby" [settings]="multiselectSettings"></multiselect>
+
+
+                <!--<span class="custom-dropdown small">
+                  <select  (change)="onIndustryChange($event.target.value)" [(ngModel)]="selectedDropDown.OppoCreatedByid">
+                    <option *ngFor="let list of OppoCreatedBy" [value]="list.CreatedByEmpId">{{list.CreatedByName}}</option>
+                  </select>
+                </span>-->
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+              <label>{{'Product' | filterLabel : Customizelabels}}</label>
+              <span class="custom-dropdown small">
+                <select [(ngModel)]="selectedDropDown.Productid">
+                  <option *ngFor="let list of Product" [value]="list.SdlId">{{list.Name}}</option>
+                </select>
+              </span>
+
+              <!--<multiselect [data]="Product" (getCommaSeperatedValues)="onIndustryChange($event)" [(ngModel)]="Productid" [settings]="multiselectSettings"></multiselect>-->
+
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group">
+              <label>{{'OpportunityClassification' | filterLabel : Customizelabels}}</label>
+              <multiselect [data]="OpporClassification" [(ngModel)]="selectedOppoClassif" [settings]="multiselectSettings"></multiselect>
+
+              <!--<span class="custom-dropdown small">
+                <select [(ngModel)]="selectedDropDown.OpporClassificationid">
+                  <option *ngFor="let list of OpporClassification" [value]="list.SdlId">{{list.Name}}</option>
+                </select>
+              </span>-->
+            </div>
+          </div>
+
+          <div class="row">
+         
+
+            
+          </div>
+
+          <div class="well-sm"></div>
+
+          <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-2">
+              <button class="btn-button" (click)="FilterbyIds()"><img src="./assets/images/btnFilter.png" />{{'Filter' | filterLabel : Customizelabels}}</button>
+            </div>
+          </div>
+
+    <hr class="SeparatorLine" />
+    </div>
+
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+        <h4 class="PnlHeader">CONTACT PERSON  GRID</h4>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-right" style="margin-top:4px" align="right">
+        <button id="btnAddContactPerson" class="btn btn-sm mybutton" style="width:100px !important" >
+          <img class="ng-tns-c5-3" src="./assets/images/btnAdd.png"> &nbsp;&nbsp;{{'ADD' | filterLabel : Customizelabels}}
+        </button>
+      </div>
+    </div>
+
+    <!--<Search Work>-->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="margin-top:34px;">
+
+        <search-control (keypress)="eventHandler($event)"></search-control>
+
+        <div style="display:inline;"><label style="font-size:15px;">&nbsp;|&nbsp;&nbsp;</label></div>
+        <label style="display:inline;font-size:15px;">
+          {{ 'Showing' | filterLabel : Customizelabels}}
+          {{p?p>0?(((p*itemPerPage)-itemPerPage)+1):(((p*itemPerPage)-itemPerPage)):0}} - {{(p*itemPerPage)-itemPerPage+(objAssesCriteriaList?.length)}}
+          {{ 'of' | filterLabel : Customizelabels}} {{strListTotalItems}}
+          {{ 'records' | filterLabel : Customizelabels}}
+        </label>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 " align="right">
+        <div>
+          <label>{{ 'RecordPerPage' | filterLabel : Customizelabels}}</label>
+        </div>
+        <div style="width:100px">
+          <span class="custom-dropdown small">
+            <select [(ngModel)]="itemPerPage" (change)="gridLoad()">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="500">500</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+    </div>
+    <!--<Search Work>-->
+          
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="table-responsive">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:100%">
+
+            <table class="Grid table">
+              <thead>
+                <tr>
+                  <th scope="col" style="border-right-color: transparent;width: 1%;"></th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Opportunity Name</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Country</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">City</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Contact Person</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Email Address</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Cell No.</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Landline No.</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Email Address</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Inactivated On</th>
+                  <th class="tbHeadertextCenter tblHeaderTextAlign" style="cursor:pointer;">Inactivation Reason</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let group of ContactPersonGrid | paginate: { itemsPerPage: itemPerPage, currentPage: p ,totalItems:strListTotalItems}" class="table-light">
+                  <td style="border-right-color: transparent;width: 5%;">
+                    <img src="./assets/images/imgEdit.png" />&nbsp;&nbsp;&nbsp;<img src="./assets/images/imgRemove.png" /><!--&nbsp;&nbsp;&nbsp;-->
+                  </td>
+
+                  <!--<td>{{group.OpportunityId}}</td>
+            <td>{{group.OCPId}}</td>-->
+                  <td>{{group.OpportunityName}}</td>
+                  <td>{{group.Country}}</td>
+                  <td>{{group.City}}</td>
+                  <td>{{group.ContactPerson}}</td>
+                  <td>{{group.EmailAddress}}</td>
+                  <td>{{group.Designation}}</td>
+                  <td>{{group.SalesOwner}}</td>
+                  <td>{{group.OpportunityCreatedBy}}</td>
+                  <td>{{group.OpportunityClassification}}</td>
+                  <td>{{group.LastFollowUp}}</td>
+                </tr>
+                <tr *ngIf="showGrid">
+                  <td class="text-center" colspan="13">
+                    <label>No data</label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <pagination-controls (pageChange)="p = $event" class="text-center"></pagination-controls>
+        </div>
+    </div>
+      <div class="well-sm"></div>
+      </div>
+
+    <hr class="SeparatorLine" />
+    </div>
+   
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+        <h4 class="PnlHeader">CONTACT PERSON  GRID</h4>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-right" style="margin-top:4px" align="right">
+        <button id="btnAddContactPerson" class="btn btn-sm mybutton" style="width:100px !important">
+          <img class="ng-tns-c5-3" src="./assets/images/btnAdd.png"> &nbsp;&nbsp;{{'REMOVE' | filterLabel : Customizelabels}}
+        </button>
+      </div>
+    </div>
+    <!--<h4 class="PnlHeader"> CONTACT PERSON GRID </h4>
+          <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-2">
+              <button class="btn-button"><img src="./assets/images/btnGeneral.png" /> {{'REMOVE' | filterLabel : Customizelabels}}</button>
+            </div>
+          </div>-->  
+    <div class="well-lg"></div>
+ 
+    </div>
+ 
+    <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 panel-fixed-btn">
+      <button class="btn-button" ><img src="./assets/images/btnSave.png" />{{'Save' | filterLabel : Customizelabels}}</button>
+      <button class="btn-button" ><img src="./assets/images/btnGeneral.png" />{{'Refresh' | filterLabel : Customizelabels}}</button>
+    </div>
+  </div>
+
+
+
